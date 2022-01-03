@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Especificación API Rest - Sprint 2 FC</title>
+	<link href="css/styles.css?20" rel="stylesheet">
+</head>
+<body>
+	<h2>Especificación API Rest proyecto First Commit</h2>
+	<div class="part">
+		<div class="part-header" id="1">admins-controller <i class="fas fa-chevron-right"></i></div>
+		<div class="part-content content-green" id="controller-1" style="display: none;">
+			<div class="part-title title-green" id="1"><span>POST</span> /api/admins/login</div>
+			<div id="details-1" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>loginInfo<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;username: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;password: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Invalid email or password"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="part">
+		<div class="part-header" id="2">students-controller <i class="fas fa-chevron-right"></i></div>
+		<div class="part-content content-blue" id="controller-2" style="display: none;">
+			<div class="part-title title-blue" id="2"><span>GET</span> /api/students/list</div>
+			<div id="details-2" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-blue">
+						<i>Sin parámetros</i>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-blue">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											[{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;admin_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;fullname: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;email: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;phone: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;country: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;city: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;can_move: boolean,
+												&nbsp;&nbsp;&nbsp;&nbsp;work_type: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;photo: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;curriculum: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;tags: "string"
+											}]
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-green" id="controller-2" style="display: none;">
+			<div class="part-title title-green" id="3"><span>POST</span> /api/students/add</div>
+			<div id="details-3" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>student<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;admin_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;fullname: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;email: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;phone: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;country: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;city: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;can_move: boolean,
+												&nbsp;&nbsp;&nbsp;&nbsp;work_type: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;photo: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;curriculum: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;tags: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>201</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;admin_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;fullname: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;email: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;phone: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;country: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;city: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;can_move: boolean,
+												&nbsp;&nbsp;&nbsp;&nbsp;work_type: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;photo: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;curriculum: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;tags: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-yellow" id="controller-2" style="display: none;">
+			<div class="part-title title-yellow" id="4"><span>PUT</span> /api/students/update</div>
+			<div id="details-4" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-yellow">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>student<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;admin_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;fullname: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;email: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;phone: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;country: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;city: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;can_move: boolean,
+												&nbsp;&nbsp;&nbsp;&nbsp;work_type: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;photo: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;curriculum: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;tags: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-yellow">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;admin_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;fullname: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;email: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;phone: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;country: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;city: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;can_move: boolean,
+												&nbsp;&nbsp;&nbsp;&nbsp;work_type: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;photo: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;curriculum: "string",
+												&nbsp;&nbsp;&nbsp;&nbsp;tags: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-red" id="controller-2" style="display: none;">
+			<div class="part-title title-red" id="6"><span>DELETE</span> /api/students/delete</div>
+			<div id="details-6" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-red">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id<br><i>(int)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-yellow">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Deleted successfully"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>404</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "User not exists"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="part">
+		<div class="part-header" id="3">tags-controller <i class="fas fa-chevron-right"></i></div>
+		<div class="part-content content-green" id="controller-3" style="display: none;">
+			<div class="part-title title-green" id="7"><span>POST</span> /api/tags/add</div>
+			<div id="details-7" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>tag<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: 0,
+												&nbsp;&nbsp;&nbsp;&nbsp;title: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;title: "string"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-red" id="controller-3" style="display: none;">
+			<div class="part-title title-red" id="8"><span>DELETE</span> /api/tags/delete</div>
+			<div id="details-8" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-red">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id<br><i>(int)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;id: int
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-red">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Tag delete successfully"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-green" id="controller-3" style="display: none;">
+			<div class="part-title title-green" id="9"><span>POST</span> /api/tags/set</div>
+			<div id="details-9" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>tagSet<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;student_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;tag_id: int
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Tag set successfully"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part-content content-green" id="controller-3" style="display: none;">
+			<div class="part-title title-green" id="10"><span>POST</span> /api/tags/unset</div>
+			<div id="details-10" style="display: none;">
+				<div class="part-detailed">
+					<h4>Parámetros</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>tagSet<br><i>(object)</i></td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;student_id: int,
+												&nbsp;&nbsp;&nbsp;&nbsp;tag_id: int
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="part-detailed">
+					<h4>Respuesta(s)</h4>
+					<div class="detailed-content detail-green">
+						<table>
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>200</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Tag unset successfully"
+											}
+										</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>
+										<pre>
+											{
+												&nbsp;&nbsp;&nbsp;&nbsp;msg: "Unauthorized"
+											}
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/scripts.js?11"></script>
+	<script src="https://kit.fontawesome.com/1e0ee6cfb3.js" crossorigin="anonymous"></script>
+</body>
+</html>

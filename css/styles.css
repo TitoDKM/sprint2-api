@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+	--blue-primary: #3498DB;
+	--blue-secondary: #5DADE2;
+	--green-primary: #2ECC71;
+	--green-secondary: #58D68D;
+	--red-primary: #CB4335;
+	--red-secondary: #EC7063;
+	--yellow-primary: #F1C40F;
+	--yellow-secondary: #F4D03F;
+}
+
+body, html {
+	font-family: 'Ubuntu', sans-serif;
+	padding: 15px;
+}
+
+.part-header {
+	font-weight: bold;
+	height: 100%;
+	border-bottom: 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+	cursor: pointer;
+}
+
+.part-header > i {
+	float: right;
+	cursor: pointer;
+}
+
+.part-content {
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+.content-blue {
+	border: 1px solid var(--blue-primary);
+	background-color: rgba(93, 173, 226, 0.1);
+}
+
+.content-green {
+	border: 1px solid var(--green-primary);
+	background-color: rgba(93, 173, 226, 0.1);
+}
+
+.content-yellow {
+	border: 1px solid var(--yellow-primary);
+	background-color: rgba(93, 173, 226, 0.1);
+}
+
+.content-red {
+	border: 1px solid var(--red-primary);
+	background-color: rgba(93, 173, 226, 0.1);
+}
+
+.part-title {
+	height: 28px;
+    /*padding-top: 10px;
+    padding-left: 10px;*/
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.title-blue {
+	border-bottom: 1px solid var(--blue-primary);
+}
+
+.title-blue > span {
+	background-color: var(--blue-primary);
+}
+
+.title-green {
+	border-bottom: 1px solid var(--green-primary);
+}
+
+.title-green > span {
+	background-color: var(--green-primary);
+}
+
+.title-yellow {
+	border-bottom: 1px solid var(--yellow-primary);
+}
+
+.title-yellow > span {
+	background-color: var(--yellow-primary);
+}
+
+.title-red {
+	border-bottom: 1px solid var(--red-primary);
+}
+
+.title-red > span {
+	background-color: var(--red-primary);
+}
+
+.part-title > span {
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.part-detailed h4 {
+	margin: 10px 0px 15px 0px;
+}
+
+.detailed-content {
+	margin-left: 5px;
+	padding-left: 10px;
+}
+
+.detail-blue {
+	border-left: 1px solid var(--blue-primary);
+}
+
+.detail-green {
+	border-left: 1px solid var(--green-primary);
+}
+
+.detail-yellow {
+	border-left: 1px solid var(--yellow-primary);
+}
+
+.detail-red {
+	border-left: 1px solid var(--red-primary);
+}
+
+table th {
+	min-width: 200px;
+    text-align: left;
+}
+
+table pre {
+	white-space: pre-line;
+    background-color: #CECECE;
+    padding: 10px;
+}
